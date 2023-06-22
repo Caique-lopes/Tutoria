@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Página de Exemplo</title>
+    <title>Página de fotos</title>
+    <style>
+      img{
+            display: block;
+            width: 410px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Página de Exemplo</h1>
+  <h1>Página de fotos</h1>
 
-  <p>Bem-vindo à página de exemplo!</p>
+  <p>Bem-vindo à página de fotos!</p>
 
   <p>Esta é uma página fictícia usada para fins de treinamento.</p>
-  <button onclick="redirectToPage('index.html')">Voltar para home (nome/email)</button>
-  <button onclick="redirectToPage('exemplo2.html')">Ir para Outroexemplo.com</button>
+  <img src="fotos/WhatsApp Image 2023-06-16 at 16.29.05.jpeg" alt="foto da fifozinha">
+  <button onclick="redirectToPage('index.html')">Voltar home (nome/email)</button>
+  <button onclick="redirectToPage('exemplo2.html')">Video</button>
 
   <script>
     function redirectToPage(url) {
