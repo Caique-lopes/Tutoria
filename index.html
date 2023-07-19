@@ -26,32 +26,29 @@
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
 
-    <button type="submit" onclick="DispararGTM(Enviar)">Enviar</button>
+    <button type="submit" onclick="DispararGTM('enviarFormulario')">Enviar</button>
   </form>
 
   <button onclick="redirectToPage('exemplo1.html')">Fotos</button>
   <button onclick="redirectToPage('exemplo2.html')">Video</button>
-  <script type="text/javascript">
-    window.DispararGTM = function() {
-      window.dataLayer = window.dataLayer || [];
-      dataLayer.push({'event':'gtm.formSubmit'});
-    };
-  </script>
+  
+  
   <script>
+    window.DispararGTM = function(evento) {
+      window.dataLayer = window.dataLayer || [];
+      // Utilizando o evento passado como parâmetro para acionar o dataLayer.push()
+      dataLayer.push({'event': evento});
+    };
+
     function redirectToPage(url) {
-      // Aqui você pode adicionar seu código para redirecionamento ou outras ações desejadas.
       window.location.href = url;
     }
 
     document.getElementById("myForm").addEventListener("submit", function(event) {
-      // Aqui você pode adicionar seu código para manipular o envio do formulário.
-      // Por exemplo, você pode enviar dados para uma API, realizar validações, etc.
-      
-      // Impede o envio do formulário padrão para que possamos controlar o redirecionamento.
       event.preventDefault();
-      
-      // Redireciona o usuário para o terceiro exemplo ou página de destino personalizada.
       redirectToPage('exemplo3.html');
+      // Chamando a função DispararGTM com o nome do evento 'enviarFormulario' quando o formulário é enviado.
+      DispararGTM('enviarFormulario');
     });
   </script>
 </body>
