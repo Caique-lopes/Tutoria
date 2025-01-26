@@ -19,15 +19,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   <h1>Exemplo HTML5 com Formulário e Botões</h1>
 
-  <form id="myForm" action="exemplo3.html">
-    <label for="name">Nome:</label>
-    <input type="text" id="name" name="name" required>
+<form id="myForm" action="exemplo3.html">
+  <label for="name">Nome:</label>
+  <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  
+  <label for="phone">Celular:</label>
+  <input type="tel" id="phone" name="phone" required>
 
-    <button type="submit" onclick="DispararGTM('enviarFormulario')">Enviar</button>
-  </form>
+  <button type="submit" onclick="DispararGTM('enviarFormulario')">Enviar</button>
+</form>
 
   <button onclick="redirectToPage('exemplo1.html')">Fotos</button>
   <button onclick="redirectToPage('exemplo2.html')">Video</button>
